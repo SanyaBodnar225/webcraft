@@ -72,3 +72,23 @@
   .hero-art{height:285px;margin-top:20px}
 }
 .step-symbol svg{display:block;width:32px;height:32px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* Prevent the about section's long Ukrainian heading from widening mobile layout. */
+@media(max-width:640px){
+  .about{grid-template-columns:minmax(0,1fr)}
+  .about-copy,.about-visual{min-width:0}
+  .about-copy h2{font-size:clamp(31px,8.6vw,40px);overflow-wrap:anywhere}
+  .about-copy>p{max-width:100%;overflow-wrap:anywhere}
+}
+
+/* Draw diagonal arrows with CSS so iOS cannot replace the text glyph with emoji. */
+.header-cta span,.button span,.text-link span,.card-arrow,.round-arrow,.node-start span,.work-footnote span,.contact-aside>a span{position:relative;display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;font-size:0!important;line-height:0;vertical-align:middle}
+.header-cta span::before,.button span::before,.text-link span::before,.card-arrow::before,.round-arrow::before,.node-start span::before,.work-footnote span::before,.contact-aside>a span::before{content:"";position:absolute;top:2px;right:2px;width:7px;height:7px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor}
+.header-cta span::after,.button span::after,.text-link span::after,.card-arrow::after,.round-arrow::after,.node-start span::after,.work-footnote span::after,.contact-aside>a span::after{content:"";position:absolute;top:6px;right:2px;width:11px;height:1.5px;background:currentColor;transform:rotate(-45deg);transform-origin:right center}
+.round-arrow{width:30px;height:30px}
+.round-arrow::before{top:9px;right:9px;width:8px;height:8px}
+.round-arrow::after{top:15px;right:9px;width:12px}
+.sparkle-icon{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.icon-bot .sparkle-icon{width:22px;height:22px}
+.team-initial .sparkle-icon{width:12px;height:12px}
+.node-mark .sparkle-icon{width:14px;height:14px}
