@@ -41,3 +41,33 @@
   .contact-content>p{font-size:12px}
   .contact-aside>a{font-size:12px}
 }
+@media(max-width:390px){
+  .section-wrap{width:calc(100% - 32px)}
+  .site-header{padding-inline:16px}
+  .hero{padding-top:58px}
+  .hero h1{font-size:58px;letter-spacing:-.08em}
+  .hero-lead{font-size:13px;line-height:1.7}
+  .hero-actions{gap:12px}
+  .button{padding:13px 12px;gap:14px}
+  .hero-art{height:315px;transform:scale(.66);margin-top:30px;margin-bottom:-75px}
+  .service-card{min-height:285px;padding:15px 11px}
+  .service-card h3{font-size:18px}
+  .service-card p{font-size:9px}
+  .card-meta{left:11px;font-size:5px;letter-spacing:.04em}
+  .contact-panel{padding-inline:19px}
+}
+@media(max-width:360px){
+  .hero h1{font-size:53px}
+  .hero-actions{align-items:flex-start;flex-direction:column}
+  .hero-art{height:285px;transform:scale(.6);margin-bottom:-80px}
+  .service-grid{grid-template-columns:1fr}
+  .service-card{min-height:245px;padding:17px 16px}
+  .service-card p{font-size:11px;min-height:0;max-width:290px}
+  .card-meta{left:16px;font-size:7px}
+}
+@media(max-height:700px) and (max-width:640px){
+  .hero{padding-top:46px}
+  .hero h1{margin-top:20px;margin-bottom:16px}
+  .hero-actions{margin-top:20px}
+  .hero-art{height:285px;margin-top:20px}
+}
