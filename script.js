@@ -1,3 +1,15 @@
+// Always enter the site at the top, even when the shared URL carries a section hash
+// or the browser restores an old scroll position. In-page navigation still works.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('pageshow', () => {
+  if (window.location.hash) {
+    history.replaceState(history.state, '', `${window.location.pathname}${window.location.search}`);
+  }
+  document.documentElement.style.scrollBehavior = 'auto';
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => document.documentElement.style.removeProperty('scroll-behavior'));
+});
+
 const menuButton = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
 
