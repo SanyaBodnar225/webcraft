@@ -92,3 +92,7 @@
 .icon-bot .sparkle-icon{width:22px;height:22px}
 .team-initial .sparkle-icon{width:12px;height:12px}
 .node-mark .sparkle-icon{width:14px;height:14px}
+/* Use one crisp northeast arrow mask for every link icon. */
+.header-cta span::before,.button span::before,.text-link span::before,.card-arrow::before,.round-arrow::before,.node-start span::before,.work-footnote span::before,.contact-aside>a span::before{top:50%;right:auto;left:50%;width:12px;height:12px;transform:translate(-50%,-50%);border:0;background-color:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 12 12 4M5 4h7v7' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 12 12 4M5 4h7v7' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.header-cta span::after,.button span::after,.text-link span::after,.card-arrow::after,.round-arrow::after,.node-start span::after,.work-footnote span::after,.contact-aside>a span::after{display:none}
+.round-arrow::before{top:50%;right:auto;left:50%;width:13px;height:13px}
